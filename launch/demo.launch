@@ -1,0 +1,15 @@
+<launch>
+
+    <node pkg="depth_image_masker" name="depth_image_masker" type="depth_image_masker_node.py" output="screen">
+        <param name="~depth_image_in_topic" value="/wrist_camera/depth/image_rect_raw" />
+        <param name="~depth_image_out_topic" value="/wrist_camera/depth/image_rect_raw_masked" />
+        
+        <!-- Set dimensions of rectangular mask -->
+        <param name="~x_lower" value="0" />
+        <param name="~x_upper" value="640" />
+        <param name="~y_lower" value="300" />
+        <param name="~y_upper" value="480" />
+    </node>
+
+
+</launch>
